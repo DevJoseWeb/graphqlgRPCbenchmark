@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "micro": "^9.0.2"
+  },
+  "name": "graph-grpc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Rodrigo Quezada <roderik.ikana@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
