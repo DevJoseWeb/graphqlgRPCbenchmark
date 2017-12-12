@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "micro": "^9.0.2"
+    "micro": "^9.0.2",
+    "then-sleep": "^1.0.1"
   },
   "name": "graph-grpc",
   "version": "1.0.0",
