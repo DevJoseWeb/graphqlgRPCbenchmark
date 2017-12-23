@@ -1,9 +1,4 @@
-const { json } = require('micro')
-const sleep = require('then-sleep')
+const micro = require('micro')
+const srv = micro(require('./main'))
 
-module.exports = async (req, res) => {
-  const { time } = await json(req)
-  
-  await sleep(time)
-  return `Waited ${time}`
-}
+srv.listen(3000, () => console.log('Listening on port 3000'))

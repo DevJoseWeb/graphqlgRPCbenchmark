@@ -1,0 +1,13 @@
+type Result {
+  name: String!
+  phone: String!
+  id: String!
+  profilePic: String!
+  birthday: String!
+  balance: Float!
+}
+
+type Query {
+  http(size: Int,parts: Int): [Result]!
+  grpc(size: Int,parts: Int): [Result]!
+}
