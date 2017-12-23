@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package service;
+
+service Service {
+  rpc GetData(Query) returns (Results) {}
+}
+
+message Query {
+  string content = 1;
+}
+
+message Results {
+  repeated Result results = 1;
+}
+
+message Result {
+  string name = 1;
+  float latitude = 2;
+  float longitude = 3;
+}

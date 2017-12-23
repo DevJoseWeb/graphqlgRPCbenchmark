@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "grpc": "^1.8.0",
     "micro": "^9.0.2",
     "then-sleep": "^1.0.1"
   },
