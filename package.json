@@ -1,13 +1,22 @@
 {
   "dependencies": {
+    "graphql-yoga": "^0.4.4",
     "grpc": "^1.8.0",
-    "micro": "^9.0.2",
-    "then-sleep": "^1.0.1"
+    "jsonfile": "^4.0.0",
+    "micro": "^9.0.2"
   },
   "name": "graph-grpc",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Rodrigo Quezada <roderik.ikana@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "dev": "nodemon client/index.js"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "lodash.times": "^4.3.2",
+    "nodemon": "^1.14.3"
+  }
 }

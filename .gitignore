@@ -84,3 +84,5 @@ typings/
 
 # dotenv environment variables file
 .env
+
+mock/mock.json
