@@ -1,19 +1,15 @@
 const path = require('path')
 const grpc = require('grpc')
+const jsonfile = require('jsonfile')
 
 const PROTO_PATH = path.join(__dirname, 'service.proto')
 
 const service = grpc.load(PROTO_PATH).service
 
+const file = jsonfile.readFileSync(path.join(__dirname, '..', 'mock', 'mock.json'))
+
 const getData = (call, callback) => {
-  console.log(call.request.content)
-  callback(null ,[
-    {
-      name: 'roderik',
-      longitude: 1.1,
-      latitude: 1.2,
-    }
-  ])
+  callback(null, file.slice(0, call.request.count))
 }
 
 const main = () => {

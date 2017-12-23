@@ -4,6 +4,7 @@ const jsonfile = require('jsonfile')
 
 const { GraphQLServer } = require('graphql-yoga')
 const httpSrv = require('./http')
+const proto = require('./proto')
 
 const typeDefs = fs.readFileSync(path.join(__dirname, 'schema.graphql'), 'utf-8')
 const json = jsonfile.readFileSync(path.join(__dirname, '..' ,'mock', 'mock.json'))
@@ -11,7 +12,7 @@ const json = jsonfile.readFileSync(path.join(__dirname, '..' ,'mock', 'mock.json
 const resolvers = {
   Query: {
     http: httpSrv,
-    grpc: (_, { size }) => json,
+    grpc: proto,
   },
 }
 

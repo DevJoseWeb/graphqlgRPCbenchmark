@@ -7,7 +7,7 @@ service Service {
 }
 
 message Query {
-  string content = 1;
+  uint32 count = 1;
 }
 
 message Results {
@@ -16,6 +16,9 @@ message Results {
 
 message Result {
   string name = 1;
-  float latitude = 2;
-  float longitude = 3;
+  string phone = 2;
+  string id = 3;
+  string profilePic = 4;
+  string birthday = 5;
+  float balance = 6;
 }
