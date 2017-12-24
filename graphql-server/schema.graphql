@@ -9,5 +9,6 @@ type Result {
 
 type Query {
   http(size: Int,parts: Int): [Result]!
+  httpc(size: Int,parts: Int): [Result]!
   grpc(size: Int,parts: Int): [Result]!
 }
