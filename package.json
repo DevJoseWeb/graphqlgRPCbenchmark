@@ -15,7 +15,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nodemon graphql-server/index.js"
+    "dev": "nodemon graphql-server/index.js",
+    "start-servers": "node start-servers.js",
+    "start-client": "node server-graphql/index.js"
   },
   "devDependencies": {
     "faker": "^4.1.0",
