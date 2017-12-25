@@ -45,7 +45,8 @@ const test = (size, parts) => () => new Promise((resolve, reject) => {
     res[event.target.name] = {
       sample: event.target.stats.sample.length,
       rme: event.target.stats.rme,
-      hz: event.target.hz
+      hz: event.target.hz,
+      scenario: {size, parts}
     }
   })
 

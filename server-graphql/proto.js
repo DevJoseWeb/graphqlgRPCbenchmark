@@ -12,7 +12,12 @@ const client = new service.Service(`${process.env.SERVERURL}:50051`, grpc.creden
 
 const getData = (count) => new Promise((resolve, reject) => {
   client.getData({ count }, function(err, response) {
-    resolve(response)
+    if (err) {
+      console.log(err)
+      reject(err)
+    } else {
+      resolve(response)
+    }
   })
 })
 
