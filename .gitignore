@@ -86,3 +86,5 @@ typings/
 .env
 
 mock/mock.json
+
+results.json
